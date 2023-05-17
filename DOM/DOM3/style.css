@@ -1,0 +1,9 @@
+.destacado{
+    color: blueviolet;
+    background-color: aqua;
+    font-size: 100px;
+}
+
+.oculto{
+    display: none;
+}
