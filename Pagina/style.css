@@ -1,24 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+:root {
+    --shadow-color: 0deg 0% 54%;
+    --shadow-elevation-low:
+      0px 1px 1.2px hsl(var(--shadow-color) / 0.58),
+      -0.1px 4.5px 5.2px -2.2px hsl(var(--shadow-color) / 0.65);
+    --shadow-elevation-medium:
+      0px 1px 1.2px hsl(var(--shadow-color) / 0.82),
+      -0.5px 22.5px 26.2px -2.2px hsl(var(--shadow-color) / 0.91);
+    --shadow-elevation-high:
+      0px 1px 1.2px hsl(var(--shadow-color) / 0.76),
+      -0.4px 17px 19.8px -0.7px hsl(var(--shadow-color) / 0.8),
+      -1px 49.1px 57.1px -1.5px hsl(var(--shadow-color) / 0.84),
+      -2.6px 125px 145.3px -2.2px hsl(var(--shadow-color) / 0.89);
+  }
+
 body{
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;}
-header{
-    margin-bottom: auto;
 
+header h1{
+    background-color: #0093E9;
+    padding: 0em 1em 0em 1em;
+    border-radius: 4em;
+    font-size: 2em;
+    margin-left: 3em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    
 }
 nav{
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2400de;
-    background-image: linear-gradient(60deg, #5034da 0%, #FC00FF 100%);
-
-}
-
-.logo{
-    margin-left: 2em;    
-    width: 5%;
+    background-image: linear-gradient(43deg, #4c5660 10%, #c7a0d8 17%, #d8c597 27%, #d4b1cd 51%, #83a2b9 70%, #e3ff82 100%);
+    
 }
 
 ul{
@@ -28,78 +48,196 @@ ul{
 li{
     list-style: none;
 }
-h1{
-    
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-}
-a{  
-    font-family: Arial, Helvetica, sans-serif;
+header a{  
+    padding: 0em 1em 0em 1em ;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
     display: inline-block;
-    margin: 15px;
-    padding: 15px 30px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.7em;
     text-decoration: none;
-    cursor: pointer;
     border-radius: 10px;
-    color: rgb(255, 255, 255);
-    padding: 1em;
+    color: white;
     margin-right: 1.5em;
     list-style: none;
 }
-a:hover{
-    color: white;
-    box-shadow: inset 0 -100px 0 0 #725AC1;
+
+header a:hover{
+    background-color: #0093E9;
 }
 
-main{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 50px;
-    gap: 60px;
-}
-.yandhi{
-    width: 17%;
-    border-radius:0 50px 50px 0 ;
-}
+/*SECTION 1*/
 
-.container{
-    background-color: #a2a2a5;
-    border-radius: 50px;
+.MainContainer{
+    height: 100vh;
+    text-align: center;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.container p{
-    padding:5px 20px;}
+.YandhiCover{
+    margin-left: 80px;
+    width: 30em;
+}
+
+.YandhiTitle h1{
+    display: inline;
+    letter-spacing: -5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10em;
+    color: rgb(187, 110, 218);
+}
+
+.YandhiTitle h2{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5em;
+}
+
+hr{
+    background-color: #80D0C7;
+}
+
+/*SECTION 2*/
+.card-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    color: white;
+    background-color: #0093E9;
+    box-shadow: var(--shadow-elevation-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 3em;
+    height: auto;
+    width: 50em;
+
+}
+
+.card-container :hover{
+    color: white;
+    font-weight: bold;
+
+}
+
+.text h1{
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    font-family: 'Oswald', sans-serif;
+
+}
+.text p{
+    margin: 0px 50px 40px 50px;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif; 
+}
+
+/*Galeria*/
+
+.gallery{
+    width: 550px;
+}
+
+#Galeria h1{
+    font-size: 2.5em;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.img-gallery{
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+
+}
+.img-gallery img {
+    z-index: 1.2;
+    width: 100%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.img-gallery img:hover {
+    transform: scale(1.1);
+  }
+
+.ful-img{
+ width: 100%;
+ height: 100vh;
+ background-color: rgba(0,0,0,0.9);
+ position: fixed;
+ top: 0;
+ left: 0;
+ display: none;
+ align-items: center;
+ justify-content: center;
+ z-index: 99;
+}
+.ful-img img{
+    width: 90%;
+    max-width: 600px;
+}
+
+.ful-img span{
+    background-image: linear-gradient(43deg, #4c5660 10%, #c7a0d8 17%, #d8c597 27%, #d4b1cd 51%, #83a2b9 70%, #e3ff82 100%);
+    width: 1.5em;
+    border-radius: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+/*Tracklist o videos*/
+
+.main-video{
+    background-color: #b58cc1;
+    background-image: linear-gradient(180deg, #b58cc1 0%, #b1c1de 15%, #ffffff 21%, #ffffff 87%, #ac9cd4 90%, #b5538d 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Tracklist h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+#Tracklist p{
+    font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
 
 footer{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
     color: white;
     margin-top: auto;
-    background-color: #2400de;
-    background-image: linear-gradient(60deg, #5034da 0%, #FC00FF 100%);    
+    background-color: #4c5660;
+    background-image: linear-gradient(43deg, #4c5660 10%, #c7a0d8 17%, #d8c597 27%, #d4b1cd 51%, #83a2b9 70%, #e3ff82 100%);    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-@media(max-width: 1370px){
-    nav, footer{
-        background-color: #D9AFD9;
-        background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
 
-    }
-    .yandhi{
-        width: 150px;
-    }
-    .container{
-        text-align: right;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        display: grid;
-        align-content: center;
-        justify-content: center;
-
-    }
-
-}
 
